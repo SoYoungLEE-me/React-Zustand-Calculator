@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { evaluate as mathEvaluate } from "mathjs";
 
 const calcStore = create((set) => ({
   expression: "", //화면에 표시될 식
@@ -25,7 +26,7 @@ const calcStore = create((set) => ({
         const sanitized = state.expression
           .replace(/×/g, "*")
           .replace(/÷/g, "/"); //곱하기와 나누기, 제곱 계산 기호를 바꿔주기
-        const evalResult = eval(sanitized);
+        const evalResult = mathEvaluate(sanitized);
         return {
           expression: evalResult.toString(),
         };
