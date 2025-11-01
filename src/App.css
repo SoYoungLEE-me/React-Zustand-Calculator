@@ -67,3 +67,27 @@ body {
 .function-btn:hover {
   background-color: #b0b0b0;
 }
+
+/*모바일 반응형*/
+@media (max-width: 480px) {
+  .calculator {
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .display-container {
+    font-size: 2rem;
+    padding: 1.2rem;
+  }
+
+  .keypad-container {
+    gap: 10px;
+  }
+
+  .keypad-button {
+    font-size: 1.4rem;
+    padding: 0.9rem;
+    border-radius: 12px;
+  }
+}
